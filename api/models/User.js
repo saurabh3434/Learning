@@ -26,7 +26,7 @@ module.exports = {
     }
 
   },
- // connection: 'mongodb',
+  connection: 'mongodb',
 
  beforeCreate: function(values, next){
   if(!values.password || values.password != values.confirmation){

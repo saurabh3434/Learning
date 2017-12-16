@@ -11,6 +11,17 @@ module.exports = {
         res.view('ClientSide/signup');
         
     },
+    index: function(req,res,next){
+        // console.log(new Date());
+        // console.log(req.session.authenticated);
+
+        User.find(function foundUsers(err, user){
+            if(err) return next(err);
+            res.view('index',{
+                user:user 
+            });
+        });
+    },
 
     create: function(req,res,next){
         User.create( req.params.all(), function userCreated(err, user){
@@ -25,8 +36,10 @@ module.exports = {
                 
                 return res.redirect('/user/signup');
             }
+            req.session.authenticated = true;
+            req.session.User = user;
            // res.json(user);
-           res.redirect('/user/show/'+user.id);
+           res.redirect('/');
             req.session.flash={}
         });
         
@@ -42,9 +55,7 @@ module.exports = {
             });
         });
     },
-    login: function(req,res,next){
-        res.view('ClientSide/login');
-    }
+   
 	
 };
 

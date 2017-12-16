@@ -39,34 +39,25 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    
-    border-radius: 25px;
-    background-color: rgb(67,146,177); /* Black*/
+   
+    background-color: white; /* Black*/
     overflow-x: show; /* Disable horizontal scroll */
     padding-top: 0px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 #mySidenav{
     width:250px;
+   
 }
 #featuredProducts{
     display:none;
 }
 
 /* The navigation menu links */
-.sidenav a,span{
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #f7f5f5;
-    display: block;
-    transition: 0.3s;
-}
+
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
+
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
@@ -89,10 +80,21 @@
     .sidenav a {font-size: 18px;}
 }
 .thumbnail a{
-    color:white;
+    color:rgb(48, 46, 46);
 }
 .thumbnail a:hover{
-    color: black;
+    color: rgb(100, 62, 62);
     text-decoration: none;
+}
+.btn{
+    border : 0px solid rgb(71, 71, 71);
+    -webkit-border-radius: 25px;
+    -moz-border-radius:25px;
+    border-radius: 25px;
+}
+.list-group{
+    -webkit-border-radius: 25px;
+    -moz-border-radius:25px;
+    border-radius: 25px;
 }
 

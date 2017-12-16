@@ -40,7 +40,7 @@
     <!--STYLES END-->
   </head>
 
-  <body style="background-color:rgb(67,146,177)">
+  <body style="background-color:rgb(193, 230, 243)">
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
           <a class="navbar-brand" href="/">FancyMania</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -64,15 +64,21 @@
                 </form>
           </div> 
           <div class="row">
-              <div class="col-sm-8">
+              <div class="col-sm-0">
                </div>
                
-               <div class="col-sm-4">
+               <div class="col-sm-12">
                    <div class="float-sm-right mr-auto">
                    <div class="btn-group">
-                       <p style="color:rgb(67, 146, 177)" >Welcome! <strong> Guest </strong></p>
-                       <a href="/user/login"class="btn btn-sm"style="color:rgb(67, 146, 177)">&nbsp;&nbsp; Login </a> 
+                       <p style="color:rgb(67, 146, 177)" >Welcome!
+                        <% if(session.authenticated) { %>
+                          <a href="/user/show/<%= session.User.id %>" class="btn btn-sm" style="color:rgb(67, 146, 177)"><strong><%= session.User.name %></strong></a>
+                          <a href="/session/destroy" class="btn btn-sm" style="color:rgb(67, 146, 177)">Sign Out</a> 
+                          <% } else { %>
+                        <strong> Guest </strong></p>
+                       <a href="/session/login"class="btn btn-sm"style="color:rgb(67, 146, 177)">&nbsp;&nbsp; Login </a> 
                        <a href="/user/signup" class="btn btn-sm"style="color:rgb(67, 146, 177)">&nbsp;&nbsp;Sign up</a>
+                       <% } %>
                        <a href="#"class="btn btn-sm"style="color:rgb(67, 146, 177)">&nbsp;&nbsp; About </a> 
                        <a href="#"class="btn btn-sm"style="color:rgb(67, 146, 177)"> &nbsp;Contact Us</a>
                      </div>

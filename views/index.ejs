@@ -1,0 +1,37 @@
+<div class="container">
+    <h3>Users</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>email</th>
+                <th>admin</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tbody>
+                <% user.forEach(function(users){ %>
+                    <tr>
+                        <td><%= users.id %></td>
+                        <td><%= users.name %></td>
+                        <td><%= users.title %></td>
+                        <td><%= users.email %></td>
+                        <% if(users.admin){ %>
+                            <td><img src="/images/admin.png" alt="admin" height="25px" width="25px"></td>
+                        <% } else { %>
+                            <td><img src="/images/pawn.png" alt="pawn" height="25px" width="25px"></td>
+                        <% } %>
+                        <td><a href="/user/show/<%= users.id %>" class="btn btn-info">Show</a></td>
+                         <td>   <a href="/user/edit/<%= users.id %>" class="btn btn-primary">Edit</a></td>
+                          <td>     <form class="d-inline" action="/user/destroy/<%= users.id %>" method="post">
+                                <input type="submit" value="Delete" class="btn btn-danger"/>
+                                <input type="hidden" name="_csrf" value="<%=_csrf %>"/>
+                            </form></td>
+                    </tr>
+               <% }) %>
+            </tbody>
+        </thead>
+    </table>
+</div>
