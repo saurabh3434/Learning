@@ -12,3 +12,29 @@ function openFeatProduct(){
     else
     document.getElementById("featuredProducts").style.display='none';
 }
+function kidsSection(){
+    var e = document.getElementById("cat").value
+    switch(e) {
+        case "select" :
+        document.getElementById("Kids").style.display='none';
+        document.getElementById("Men").style.display='none';
+        document.getElementById("Women").style.display='none';
+         break;
+            
+        case "Kids": 
+            document.getElementById("Kids").style.display='block';
+            document.getElementById("Men").style.display='none';
+            document.getElementById("Women").style.display='none';
+             break;
+        case "Men":
+            document.getElementById("Men").style.display='block';
+            document.getElementById("Women").style.display='none';
+            document.getElementById("Kids").style.display='none';
+            break;
+        case "Women":
+            document.getElementById("Men").style.display='none';
+            document.getElementById("Women").style.display='block';
+            document.getElementById("Kids").style.display='none';
+            break;
+    }
+}

@@ -1,0 +1,41 @@
+<div id="header">
+    <div class="container">
+            <div class="row">
+                    <div class="col-md-3">
+                      <div id="mySidenav" class="sidenav">
+                        <div class="list-group">
+                           <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+                          <a class="list-group-item" onclick="openFeatProduct()">Featured Product </a>
+                          <ul id="featuredProducts"style="list-style:none"  >
+                            <li><a href="#" class="list-group-item"> Shoes</a></li>
+                            <li><a href="#" class="list-group-item"> Clothes</a></li>
+                            <li><a href="#" class="list-group-item">Belts</a></li>
+                          </ul>
+                          <a href="/product/men"class="list-group-item">Men</a>
+                          <a href="/product/kids"class="list-group-item">Kids</a>
+                          <a href="/product/Women"class="list-group-item">Women</a>
+                        </div>
+                      </div>
+                    </div>
+                 
+                    <div class="col-md-9 " >
+                       
+                      <div class="row"  >
+                        <% product.forEach(function(product){ %>
+                        <div class="col-md-4">
+                          <div class="thumbnail">
+                            <a href="/product/description/<%= product.id %>">
+                                <img src="../../images/products/s1.jpg" class="img-thumbnail" alt="Lights" style="width:100%"/>
+                                <div class="caption">
+                              <p><%= product.pdname %></p>
+                               <p>Rs. <%= product.price %></p>
+                            </div>
+                            </a>
+                          </div>
+                        </div>
+                        <% }) %>
+                      </div>
+                    </div>
+                    </div>
+    </div>
+</div>

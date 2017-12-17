@@ -40,9 +40,8 @@
     <!--STYLES END-->
   </head>
 
-  <body style="background-color:rgb(255, 255, 255)">
+  <body style="background-color:rgb(193, 230, 243)">
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <div class="container">
           <a class="navbar-brand" href="/">FancyMania</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -50,50 +49,27 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/product/men">Mens</a>
+                <a class="nav-link" href="#">Mens</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/product/women">Women</a>
+                <a class="nav-link" href="#">Womens</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/product/kids">Kids</a>
+                <a class="nav-link" href="#">Kids</a>
               </li>    
             </ul>
             <form class="form-inline my-2 my-lg-0 mx-auto">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search"/>
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-              </form>
-            
-           
-          <div class="row">
-              <div class="col-sm-0">
-               </div>
-               
-               <div class="col-sm-12">
-                   <div class="float-sm-right mr-auto">
-                   <div class="btn-group">
-                       <p style="color:rgb(67, 146, 177)" >Welcome!
-                        <% if(session.authenticated) { %>
-                          <a href="/user/show/<%= session.User.id %>" class="btn btn-sm" style="color:rgb(67, 146, 177)"><strong><%= session.User.name %></strong></a>
-                          <a href="/session/destroy" class="btn btn-sm" style="color:rgb(67, 146, 177)">Sign Out</a> 
-                          <% } else { %>
-                        <strong> Guest </strong></p>
-                       <a href="/session/login"class="btn btn-sm"style="color:rgb(67, 146, 177)">&nbsp;&nbsp; Login </a> 
-                       <a href="/user/signup" class="btn btn-sm"style="color:rgb(67, 146, 177)">&nbsp;&nbsp;Sign up</a>
-                       <% } %>
-                       <a href="#"class="btn btn-sm"style="color:rgb(67, 146, 177)">&nbsp;&nbsp; About </a> 
-                       <a href="#"class="btn btn-sm"style="color:rgb(67, 146, 177)"> &nbsp;Contact Us</a>
-                     </div>
-                     </div>
-               </div>
-           </div> 
-          </div>
-          </div>
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" size="50" >
+                  <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+          </div> 
+         
         </nav>
        
     <%- body %>
 
-   
+
+
     <!--
         Client-side Templates
         ========================
@@ -153,14 +129,4 @@
     <script src="/js/custom.js"></script>
     <!--SCRIPTS END-->
   </body>
-  <footer>
-      <div id="footer" style="background-color:black">
-        <div class="container">
-          <p style="color:aliceblue">Developed by: Saurabh Kumar</p>
-          <p style="color:aliceblue">Contact information: <a href="mailto:saurabh3434@gmail.com">
-          saurabh3434@gmail.com</a>.</p>
-        </div>
-      </div>
-  </footer>
-  
 </html>

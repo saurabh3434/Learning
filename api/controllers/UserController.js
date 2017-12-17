@@ -6,15 +6,16 @@
  */
 
 module.exports = {
-    signup: function(req,res, next){
-       
+    signup: function(req,res,next){
+
+     
         res.view('ClientSide/signup');
         
     },
+   
     index: function(req,res,next){
         // console.log(new Date());
         // console.log(req.session.authenticated);
-
         User.find(function foundUsers(err, user){
             if(err) return next(err);
             res.view('index',{
@@ -55,7 +56,7 @@ module.exports = {
             });
         });
     },
-   
+      
 	
 };
 

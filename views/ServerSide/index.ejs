@@ -1,0 +1,46 @@
+<div class="container">
+
+<form action="/product/create" class="form-signin" id= "sign-up-form" method="post">
+    <input type="text" class="form-control" placeholder="product name" name="pdname" required/>
+    <input type="text" class="form-control" placeholder="quantity" name="quantity" required />
+    <input type="text" class="form-control" placeholder="Price" name="price" required />
+    <input type="text" class="form-control" placeholder="Sellers Name" name="SellerName" required/>
+    <div class="form-group">
+        <select class="form-control" id="cat" onchange="kidsSection()" name="Section">
+            <option>select</option> 
+          <option>Kids</option>
+          <option>Men</option>
+          <option>Women</option>
+        </select>
+      </div>
+    <div class="form-group">
+        <select class="form-control subGroup" id="Kids" name="category" >
+            <option>T-Shirts </option>
+            <option>Pants</option>
+            <option>Skirt</option>
+            <option>Top</option>
+            <option>Boys Footwear</option>
+            <option>Girls Footwear</option>
+        </select>
+        <select class="form-control subGroup" id="Men" name="category">
+                <option>T-Shirts </option>
+                <option>Shirts</option>
+                <option>Trousers</option>
+                <option>Kurtas</option>
+        </select>
+        <select class="form-control subGroup" id="Women" name="category">
+                    <option>Tops </option>
+                    <option>Kurtis</option>
+                    <option>Saree</option>
+                    <option>Trousers</option>
+                    <option>Footwear</option>
+        </select>
+        
+    </div>
+    <br>
+    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Submit Product"/>
+    <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+    
+</form>
+
+</div>
