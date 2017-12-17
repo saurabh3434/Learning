@@ -27,7 +27,7 @@
             </a>
           </div>
         <div class="row">
-        <div class="col-md-3">
+        <div class="col-sm-3">
           <div id="mySidenav" class="sidenav">
             <div class="list-group">
                <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
@@ -44,17 +44,19 @@
           </div>
         </div>
      
-        <div class="col-md-9 " >
+        <div class="col-sm-9 " >
            
           <div class="row"  >
             <% product.forEach(function(product){ %>
+              <br>
             <div class="col-md-4">
               <div class="thumbnail">
                 <a href="/product/description/<%= product.id %>">
                 <img src="images/products/s1.jpg" class="img-thumbnail" alt="Lights" style="width:100%"/>
                 <div class="caption">
                   <p><%= product.pdname %></p>
-                   <p>Rs. <%= product.price %></p>
+                   <p>Rs. <%= product.price %><a class="btn btn-success">add to cart </a></p>
+                   
                 </div>
                 </a>
               </div>
